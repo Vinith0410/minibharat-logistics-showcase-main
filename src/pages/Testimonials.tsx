@@ -3,8 +3,11 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Testimonials = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = "Customer Testimonials - Success Stories | Minibharat";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -12,7 +15,9 @@ const Testimonials = () => {
       metaDescription.setAttribute('content', 'Read success stories and testimonials from Minibharat customers and franchise partners. Discover how we help businesses grow with reliable logistics solutions.');
     }
   }, []);
+
   const testimonials = [
+    // IDs 1-8 remain same as before
     {
       id: 1,
       name: "Rajesh Kumar",
@@ -29,7 +34,7 @@ const Testimonials = () => {
       company: "Delhi Region",
       rating: 5,
       text: "The training and support provided by Minibharat is exceptional. I started with no logistics experience and now run a successful franchise.",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b2fd?w=150&h=150&fit=crop&crop=face"
+      avatar: "https://plus.unsplash.com/premium_photo-1690407617686-d449aa2aad3c?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 3,
@@ -84,16 +89,61 @@ const Testimonials = () => {
       rating: 5,
       text: "As a startup, we needed affordable yet reliable logistics. Minibharat provided exactly what we needed to scale.",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
-    }
-    ,
+    },
+    // Updated IDs 9-14 with different role/company
     {
-      id: 6,
-      name: "Anita Gupta",
-      role: "Retail Manager",
-      company: "Gupta Stores",
+      id: 9,
+      name: "Ananya",
+      role: "E-commerce Manager",
+      company: "QuickShip Pvt Ltd",
       rating: 5,
-      text: "Their warehousing solutions have optimized our inventory management. We've reduced costs by 30%.",
-      avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
+      text: "Mini Bharat Courier ensured my parcel reached Delhi on time, impeccable service.",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 10,
+      name: "Rajesh",
+      role: "Operations Head",
+      company: "Express Logistics",
+      rating: 5,
+      text: "Impressed with Mini Bharat Courier's swift delivery to Chennai. Dependable and trustworthy.",
+      avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 11,
+      name: "Sneha",
+      role: "Startup Advisor",
+      company: "UrbanCart",
+      rating: 5,
+      text: "Mini Bharat Courier made sending packages to Hyderabad a breeze. Seamless tracking and prompt delivery.",
+      avatar: "https://images.unsplash.com/photo-1619895862022-09114b41f16f?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 12,
+      name: "Arjun",
+      role: "International Shipping Manager",
+      company: "GlobalFreight",
+      rating: 5,
+      text: "Mini Bharat handled my international move seamlessly. Truly the best in shipping services.",
+      avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 13,
+      name: "Neha",
+      role: "Logistics Consultant",
+      company: "TransLogix",
+      rating: 5,
+      text: "Mumbai to Sydney, Mini Bharat ensured my belongings reached safely and on time.",
+      avatar: "https://plus.unsplash.com/premium_photo-1661580706392-780dec9323c2?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 14,
+      name: "Sneha",
+      role: "Franchise Owner",
+      company: "Minibharat Mumbai",
+      rating: 5,
+      text: "Thrilled to be a Mini Bharat franchisee in Mumbai! The support is incredible, and my business is booming.",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
     }
   ];
 
@@ -101,9 +151,7 @@ const Testimonials = () => {
     return [...Array(5)].map((_, index) => (
       <Star
         key={index}
-        className={`w-4 h-4 ${
-          index < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
-        }`}
+        className={`w-4 h-4 ${index < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
       />
     ));
   };
@@ -111,7 +159,7 @@ const Testimonials = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 px-4 md:px-6 lg:px-8">
@@ -145,12 +193,12 @@ const Testimonials = () => {
                   <div className="flex items-center mb-4">
                     {renderStars(testimonial.rating)}
                   </div>
-                  
+
                   {/* Testimonial Text */}
                   <blockquote className="text-muted-foreground mb-6 leading-relaxed">
                     "{testimonial.text}"
                   </blockquote>
-                  
+
                   {/* User Info */}
                   <div className="flex items-center">
                     <img
@@ -177,9 +225,12 @@ const Testimonials = () => {
             <p className="text-muted-foreground mb-8">
               Start your journey with Minibharat and become part of our growing family of satisfied customers.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button className="px-8 py-3 font-medium transform hover:scale-105 transition-all duration-300">
+              <Button
+                className="px-8 py-3 font-medium transform hover:scale-105 transition-all duration-300"
+                onClick={() => navigate("/contact")} // Navigate to Contact page
+              >
                 Become a Partner
               </Button>
               <Button variant="outline" className="px-8 py-3 font-medium transform hover:scale-105 transition-all duration-300">
