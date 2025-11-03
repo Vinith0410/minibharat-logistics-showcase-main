@@ -85,6 +85,16 @@ const Testimonials = () => {
       text: "As a startup, we needed affordable yet reliable logistics. Minibharat provided exactly what we needed to scale.",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
     }
+    ,
+    {
+      id: 6,
+      name: "Anita Gupta",
+      role: "Retail Manager",
+      company: "Gupta Stores",
+      rating: 5,
+      text: "Their warehousing solutions have optimized our inventory management. We've reduced costs by 30%.",
+      avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
+    }
   ];
 
   const renderStars = (rating: number) => {
