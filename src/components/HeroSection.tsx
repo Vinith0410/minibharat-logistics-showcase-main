@@ -10,6 +10,9 @@ import { Facebook, Instagram, Twitter, Linkedin, MessageCircle, Mail, ChevronLef
 import heroImage from "@/assets/hero-logistics.jpg";
 import warehouseImage from "@/assets/warehouse-interior.jpg";
 import teamImage from "@/assets/logistics-team.jpg";
+import slider1 from "@/assets/slider/1.jpg";
+import slider2 from "@/assets/slider/2.jpg";
+import slider3 from "@/assets/slider/3.jpg";
 
 const HeroSection = () => {
   const [isSocialOpen, setIsSocialOpen] = useState(false);
@@ -21,21 +24,21 @@ const HeroSection = () => {
 
   const slides = [
     {
-      image: heroImage,
+      image: slider1,
       title: "Revolutionizing Logistics",
       subtitle: "Across Bharat",
       description: "Connecting businesses nationwide with innovative logistics solutions. Experience seamless delivery, storage, and transportation services.",
       cta: "Explore Solutions"
     },
     {
-      image: warehouseImage,
+      image: slider2,
       title: "Advanced Warehousing",
       subtitle: "Solutions",
       description: "State-of-the-art storage facilities with cutting-edge inventory management systems for optimal efficiency.",
       cta: "View Warehouses"
     },
     {
-      image: teamImage,
+      image: slider3,
       title: "Trusted Logistics",
       subtitle: "Partner",
       description: "Join thousands of businesses who trust us with their logistics needs. Professional, reliable, and efficient service.",
@@ -243,7 +246,7 @@ const HeroSection = () => {
                 <div>
                   <Label className="text-base font-semibold mb-4 block">Choose Your Business Model *</Label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    {businessModels.map((model, index) => {
+                    { businessModels.map((model, index) => {
                       const IconComponent = model.icon;
                       return (
                         <div

@@ -1,101 +1,93 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, User, Tag, ArrowRight } from 'lucide-react';
+import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import image from "@/assets/services/Start-Logistics.jpg";
+import blog1 from "@/assets/blog/blog1.png";
+import blog2 from "@/assets/blog/blog2.png";
+import blog3 from "@/assets/blog/blog3.png";
 
 const Blog = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = "Blog | Latest Logistics Insights - Minibharat";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Stay updated with latest logistics industry trends, insights, and news from Minibharat. Expert articles on supply chain, delivery solutions, and business growth.');
+      metaDescription.setAttribute(
+        'content', 
+        'Stay updated with latest logistics industry trends, insights, and news from Minibharat. Expert articles on supply chain, delivery solutions, and business growth.'
+      );
     }
   }, []);
+
   const featuredPost = {
     id: 1,
     title: "How to Start a Logistics Franchise: A Step-by-Step Guide",
     excerpt: "India's logistics boom has been growing at a rapid pace, and franchisees are poised to be one of the top logistics companies in India.",
-    image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&h=400&fit=crop",
+    image: image,
     author: "Prashant K",
     date: "Dec 15, 2024",
     category: "Franchise Partner",
-    readTime: "5 min read"
+    readTime: "5 min read",
+      link:"/blog-how-to-start-logistics-franchise"// route for featured post
   };
 
   const blogPosts = [
     {
+      id: 1,
+      title: "Unleashing Opportunities: Starting a Delivery Point Franchise Business with Mini Bharat",
+      image: blog1,
+      author: "By Admin",
+      date: "Dec 22, 2023",
+      category: "Company Updates",
+      readTime: "3 min read",
+      link: "/blog1"
+    },
+    {
       id: 2,
-      title: "How Franchising Is Prioritizing The Mental Well-Being Of Employees",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop",
-      author: "Prashant K",
-      date: "Dec 10, 2024",
-      category: "Business in Franchising",
-      readTime: "4 min read"
+      title: "Mini Bharat: Unlocking the Profit Potential of Courier Delivery Point Businesses",
+      image: blog2,
+      author: "By Admin",
+      date: "Dec 22, 2023",
+      category: "Company Updates",
+      readTime: "5 min read",
+      link: "/blog2"
     },
     {
       id: 3,
-      title: "Crowdsourcing: The Future Of Last-Mile Delivery",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop",
-      author: "Prashant K",
-      date: "Dec 8, 2024",
-      category: "Last Mile Delivery",
-      readTime: "6 min read"
-    },
-    {
-      id: 4,
-      title: "Shadowfax Turns 10: Celebrating In Style, Shaping The Future",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop",
-      author: "Prashant K",
-      date: "Dec 5, 2024",
+      title: "Unlocking Prosperity: Mini Bharat's Journey through Delivery Point Investment and Profit",
+      image: blog3,
+      author: "By Admin",
+      date: "Dec 22, 2023",
       category: "Company Updates",
-      readTime: "3 min read"
-    },
-    {
-      id: 5,
-      title: "How Logistics Uses AI-Powered Selfie Validation To Prevent Fraud",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop",
-      author: "Prashant K",
-      date: "Dec 3, 2024",
-      category: "Technology",
-      readTime: "5 min read"
-    },
-    {
-      id: 6,
-      title: "Network Challenges During QOP Festival: Lessons Learned And Optimizations Achieved",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop",
-      author: "Prashant K",
-      date: "Nov 30, 2024",
-      category: "Technology",
-      readTime: "7 min read"
-    },
-    {
-      id: 7,
-      title: "Minibharat's Solutions To Common Last Mile Delivery Challenges",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
-      author: "Prashant K",
-      date: "Nov 28, 2024",
-      category: "Logistics Solutions",
-      readTime: "4 min read"
+      readTime: "7 min read",
+      link: "/blog3"
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 px-4 md:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary to-primary/80 bg-clip-text text-transparent">
-                Latest Insights & Updates
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Stay updated with the latest trends, insights, and news from the logistics industry
-              </p>
-            </div>
+          
+
+            <div className="text-center mb-12 mt-12 animate-fade-in overflow-visible">
+ <h1 className="text-5xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#FF6A3D] to-[#FF6A3D] bg-clip-text text-transparent leading-normal inline-block pb-1">
+  Latest Insights & Updates
+</h1>
+
+  <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+    Stay updated with the latest trends, insights, and news from the logistics industry
+  </p>
+</div>
+
 
             {/* Featured Post */}
             <div className="mb-16 animate-fade-in">
@@ -127,7 +119,7 @@ const Blog = () => {
                       <span className="mr-4">{featuredPost.date}</span>
                       <span>{featuredPost.readTime}</span>
                     </div>
-                    <Button className="self-start">
+                    <Button className="self-start" onClick={() => navigate(featuredPost.link)}>
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -175,7 +167,7 @@ const Blog = () => {
                     
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">{post.readTime}</span>
-                      <Button variant="ghost" size="sm">
+                      <Button variant="ghost" size="sm" onClick={() => navigate(post.link)}>
                         Read More
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
