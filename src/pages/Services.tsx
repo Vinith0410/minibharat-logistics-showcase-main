@@ -22,6 +22,7 @@ import {
 import courierImg from "@/assets/services/courier-services.jpg";
 import ecommerceImg from "@/assets/services/ecommerce-logistics.jpg";
 import warehouseImg from "@/assets/services/logistics-warehouse.jpg";
+import odh from "@/assets/services/sas-transport-min.jpg";
 
 const Services = () => {
   useEffect(() => {
@@ -83,7 +84,26 @@ const Services = () => {
       ],
       highlight: "₹10-20 Lakhs/month",
       badge: "Fast ROI"
-    }
+    },
+   {
+  id: "ODH",
+  title: "ODH/MDH Business Model",
+  icon: Package,
+  path: "/odh-mdh-business-model",
+  image: odh,
+  tagline: "Heavy Item Handling - Premium Logistics Franchise",
+  description: "Specialize in heavy item deliveries including appliances, furniture, and bulky items. Earn premium profits with assured volumes and handle high-value shipments with specialized equipment.",
+  features: [
+    "Premium earnings per delivery",
+    "Bidirectional delivery revenue",
+    "Consistent daily shipment volumes",
+    "Assistance from trained delivery personnel"
+  ],
+  highlight: "₹8-12 Lakhs/month potential",
+  badge: "High Profit Franchise"
+}
+
+
   ];
 
   return (

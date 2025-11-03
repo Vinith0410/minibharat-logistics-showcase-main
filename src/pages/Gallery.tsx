@@ -8,43 +8,113 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, Package, Truck, ShoppingCart, Warehouse, Grid3x3, Image as ImageIcon } from "lucide-react";
 
 // Import images
-import courierImg from "@/assets/services/courier-services.jpg";
-import ecommerceImg from "@/assets/services/ecommerce-logistics.jpg";
-import warehouseImg from "@/assets/services/logistics-warehouse.jpg";
-import fleetImg from "@/assets/services/fleet-management.jpg";
-import returnImg from "@/assets/services/return-logistics.jpg";
-import trackingImg from "@/assets/services/tracking-management.jpg";
-import heroImg from "@/assets/hero-logistics.jpg";
-import teamImg from "@/assets/logistics-team.jpg";
-import groceryImg from "@/assets/grocery-delivery.jpg";
-import truckImg from "@/assets/heavy-delivery-truck.jpg";
-import warehouseInteriorImg from "@/assets/warehouse-interior.jpg";
-import groceryWarehouseImg from "@/assets/grocery-warehouse.jpg";
+import office from "@/assets/gallery/Office/office1.jpg";
+import office1 from "@/assets/gallery/Office/office2.jpg";
+import office2 from "@/assets/gallery/Office/office3.jpg";
+import cel1 from "@/assets/gallery/Celebrations/img2.jpg";
+import cel2 from "@/assets/gallery/Celebrations/img1.jpg";
+import cel3 from "@/assets/gallery/Celebrations/img3.jpg";
+import cel4 from "@/assets/gallery/Celebrations/img4.jpg";
+import cel5 from "@/assets/gallery/Celebrations/img5.jpg";
+import cel6 from "@/assets/gallery/Celebrations/img6.jpg";
+import cel7 from "@/assets/gallery/Celebrations/img7.jpg";
+import cel8 from "@/assets/gallery/Celebrations/img8.jpg";
+import trip1 from "@/assets/gallery/Trips/trip1.jpg";
+import trip2 from "@/assets/gallery/Trips/trip2.jpg";
+import trip3 from "@/assets/gallery/Trips/trip3.jpg";
+import trip4 from "@/assets/gallery/Trips/trip4.jpg";
+import trip5 from "@/assets/gallery/Trips/trip5.jpg";
+import trip6 from "@/assets/gallery/Trips/trip6.jpg";
+import meet1 from "@/assets/gallery/Meetings/meeting1.jpg";
+import meet2 from "@/assets/gallery/Meetings/mee.jpg";
+import amazon from "@/assets/partners/amazon.png";
+import flipkart from "@/assets/partners/smflip.jpg";
+import myntra from "@/assets/partners/newmyntra.jpg";
+import swiggy from "@/assets/partners/swiggy.png";
+import zomato from "@/assets/partners/newzomato.jpg"; 
+import paytm from "@/assets/partners/paytm.png";
+import phonepe from "@/assets/partners/phonepe.png";
+import samsung from "@/assets/partners/samsung.png";
+import bigbasket from "@/assets/partners/bigbasket.png";
+import ecom from "@/assets/partners/ecom.png";
+import shadow from "@/assets/partners/shadow.png";
+import zepto from "@/assets/partners/zepto.png";
+import delhi from "@/assets/partners/delhi.png";
+
+import video1 from "@/assets/gallery/video/video1.mp4";
+import video2 from "@/assets/gallery/video/video2.mp4";
+import video3 from "@/assets/gallery/video/video3.mp4";
+import video4 from "@/assets/gallery/video/video4.mp4";
+import video5 from "@/assets/gallery/video/video5.mp4";
+import video6 from "@/assets/gallery/video/video6.mp4";
+import video7 from "@/assets/gallery/video/video7.mp4";
+import video8 from "@/assets/gallery/video/video8.mp4";
 
 interface GalleryItem {
   id: number;
-  image: string;
+  image?: string;
+  video?: string; 
   title: string;
   category: string;
   description?: string;
 }
 
+// Define gallery items
 const galleryItems: GalleryItem[] = [
-  { id: 1, image: courierImg, title: "Courier Services", category: "Services", description: "Fast and reliable courier delivery" },
-  { id: 2, image: ecommerceImg, title: "E-commerce Logistics", category: "Services", description: "Complete e-commerce fulfillment solutions" },
-  { id: 3, image: warehouseImg, title: "Warehouse Management", category: "Warehouse", description: "Modern warehouse facilities" },
-  { id: 4, image: fleetImg, title: "Fleet Management", category: "Fleet", description: "Advanced fleet tracking systems" },
-  { id: 5, image: returnImg, title: "Return Logistics", category: "Services", description: "Hassle-free return management" },
-  { id: 6, image: trackingImg, title: "Tracking & Management", category: "Technology", description: "Real-time tracking solutions" },
-  { id: 7, image: heroImg, title: "Logistics Operations", category: "Operations", description: "Efficient logistics operations" },
-  { id: 8, image: teamImg, title: "Professional Team", category: "Team", description: "Dedicated logistics professionals" },
-  { id: 9, image: groceryImg, title: "Grocery Delivery", category: "Services", description: "Fresh grocery delivery service" },
-  { id: 10, image: truckImg, title: "Heavy Item Transport", category: "Fleet", description: "Specialized heavy item delivery" },
-  { id: 11, image: warehouseInteriorImg, title: "Warehouse Interior", category: "Warehouse", description: "State-of-the-art storage facilities" },
-  { id: 12, image: groceryWarehouseImg, title: "Grocery Warehouse", category: "Warehouse", description: "Temperature-controlled storage" },
+  // Office
+  { id: 1, image: office , title: "Office Staff", category: "Office", description: "Handles day-to-day office operations, administration, and coordination." },
+  { id: 2, image: office1 , title: "Office Staff", category: "Office", description: "Ensures smooth workflow, document management, and office support." },
+  { id: 3, image: office2 , title: "Office Staff", category: "Office", description: "Manages office resources, scheduling, and internal communications." },
+
+  // Celebrations
+  { id: 4, image: cel1 , title: "Event Coordinator", category: "Celebrations", description: "Plans and organizes company events, celebrations, and team activities." },
+  { id: 5, image: cel2 , title: "Creative Team", category: "Celebrations", description: "Designs decoration, themes, and visual setups for celebrations." },
+  { id: 6, image: cel3 , title: "Event Support Staff", category: "Celebrations", description: "Assists in event execution, logistics, and coordination." },
+  { id: 7, image: cel4 , title: "Event Support Staff", category: "Celebrations", description: "Helps ensure smooth celebration activities and participation." },
+  { id: 8, image: cel5 , title: "Event Photographer", category: "Celebrations", description: "Captures important moments and memories during events." },
+  { id: 9, image: cel6 , title: "vinaykar shakurthi", category: "Celebrations", description: "Organizes with praying and blessing." },
+  { id: 10, image: cel7 , title: "Decoration Team", category: "Celebrations", description: "Manages decorations and setup for company events." },
+  { id: 11, image: cel8 , title: "Logistics Team", category: "Celebrations", description: "Coordinates transportation and delivery of event materials." },
+
+  // Trips
+  { id: 12, image: trip1 , title: "Travel Coordinator", category: "Trips", description: "Plans and manages company trips and travel schedules." },
+  { id: 13, image: trip2 , title: "Travel Assistant", category: "Trips", description: "Supports team members during travel and outings." },
+  { id: 14, image: trip3, title: "Trip Logistics Team", category: "Trips", description: "Handles transportation, accommodation, and itinerary management." },
+  { id: 15, image: trip4, title: "Safety & nightout", category: "Trips", description: "Ensures team safety and smooth execution of trips." },
+  { id: 16, image: trip5 , title: "Trip Photographer", category: "Trips", description: "Captures moments and creates travel memories for the team." },
+  { id: 17, image: trip6 , title: "Trip Coordinator Assistant", category: "Trips", description: "Assists in organizing travel logistics and team activities." },
+
+  // Meetings
+  { id: 18, image: meet1 , title: "Meeting Coordinator", category: "Meetings", description: "Schedules and organizes internal and client meetings." },
+  { id: 19, image: meet2 , title: "Meeting Support Staff", category: "Meetings", description: "Prepares meeting rooms, documents, and manages follow-ups." },
+
+  // Videos
+  { id: 20, video: video1, title: "Project Highlights", category: "video", description: "Showcasing our team working on projects and achievements." },  
+  { id: 21, video: video2, title: "Behind the Scenes", category: "video", description: "Fun moments, teamwork, and office life behind the scenes." },  
+  { id: 22, video: video3, title: "Team Training", category: "video", description: "Highlights of team training and skill development sessions." },  
+  { id: 23, video: video4, title: "Corporate Events", category: "video", description: "Videos capturing corporate events, celebrations, and activities." },  
+  { id: 24, video: video5, title: "Trip Memories", category: "video", description: "Videos of company trips and outdoor activities." },  
+  { id: 25, video: video6, title: "Client Interactions", category: "video", description: "Showcases professional interactions with clients and partners." },  
+  { id: 26, video: video7, title: "Product Launches", category: "video", description: "Videos covering new product launches and campaigns." },  
+  { id: 27, video: video8, title: "Team Testimonials", category: "video", description: "Team members sharing experiences and feedback on projects." },  
+
+  // Franchise Partners
+  { id: 28, image: amazon, title: "Amazon Team", category: "Franchise Partners", description: "Responsible for operations and coordination with Amazon." },  
+  { id: 29, image: flipkart, title: "Flipkart Team", category: "Franchise Partners", description: "Handles Flipkart partnership activities and deliveries." },  
+  { id: 30, image: myntra, title: "Myntra Team", category: "Franchise Partners", description: "Manages Myntra shipments and operational collaborations." },  
+  { id: 31, image: swiggy, title: "Swiggy Team", category: "Franchise Partners", description: "Ensures efficient handling of Swiggy orders and services." },  
+  { id: 32, image: paytm, title: "Paytm Team", category: "Franchise Partners", description: "Manages Paytm operations and parcel coordination." },  
+  { id: 33, image: phonepe, title: "PhonePe Team", category: "Franchise Partners", description: "Responsible for PhonePe shipments and partnership operations." },  
+  { id: 34, image: zomato, title: "Zomato Team", category: "Franchise Partners", description: "Handles timely and safe delivery of Zomato orders." },  
+  { id: 35, image: samsung, title: "Samsung Team", category: "Franchise Partners", description: "Manages Samsung product handling and deliveries." },  
+  { id: 36, image: bigbasket, title: "BigBasket Team", category: "Franchise Partners", description: "Responsible for BigBasket shipments and coordination." },  
+  { id: 37, image: ecom, title: "Ecom Team", category: "Franchise Partners", description: "Efficient e-commerce shipments and operations." },  
+  { id: 38, image: shadow, title: "Shadow Team", category: "Franchise Partners", description: "Responsible for Shadow shipments and coordination." },  
+  { id: 39, image: zepto, title: "Zepto Team", category: "Franchise Partners", description: "Fast and accurate order processing." },  
+  { id: 40, image: delhi, title: "Delhi Team", category: "Franchise Partners", description: "Reliable end-to-end logistics services." },  
 ];
 
-const categories = ["All", "Services", "Warehouse", "Fleet", "Technology", "Team", "Operations"];
+const categories = ["All", "Office", "Franchise Partners", "Celebrations","Trips", "Meetings", "video"];
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -157,15 +227,25 @@ const Gallery = () => {
                   className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer bg-card"
                   onClick={() => setLightboxImage(item)}
                 >
-                  {/* Image Container */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    
+                  {/* Image/Video Container */}
+                  <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    )}
+                    {item.video && (
+                      <video
+                        src={item.video}
+                        className="w-full h-full object-cover object-center rounded-2xl"
+                        controls
+                        preload="metadata"
+                      />
+                    )}
+
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
@@ -231,11 +311,21 @@ const Gallery = () => {
                   <X className="w-6 h-6" />
                 </Button>
                 
-                <img
-                  src={lightboxImage.image}
-                  alt={lightboxImage.title}
-                  className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
-                />
+                {lightboxImage.image && (
+                  <img
+                    src={lightboxImage.image}
+                    alt={lightboxImage.title}
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+                  />
+                )}
+                {lightboxImage.video && (
+                  <video
+                    src={lightboxImage.video}
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+                    controls
+                    autoPlay
+                  />
+                )}
                 
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6 rounded-b-lg">
                   <div className="flex items-center gap-3 mb-2">
