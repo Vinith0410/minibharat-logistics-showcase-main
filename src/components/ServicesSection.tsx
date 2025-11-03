@@ -4,8 +4,10 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import courierImg from "@/assets/services/courier-services.jpg";
-import warehouseImg from "@/assets/services/logistics-warehouse.jpg";
+import warehouseImg from "@/assets/large-hih-warehouse.jpg";
 import ecommerceImg from "@/assets/services/ecommerce-logistics.jpg";
+import odh from "@/assets/services/sas-transport-min.jpg";
+import grocery from "@/assets/grocery-warehouse.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -26,10 +28,19 @@ const ServicesSection = () => {
     {
       id: "grocery",
       title: "Grocery Business Model",
-      image: ecommerceImg,
+      image: grocery,
       description: "Flipkart-backed grocery delivery franchise opportunity with proven systems and support.",
       link: "/grocery-business-model"
-    }
+    },
+
+    {
+  id: "odh-mdh",
+  title: "ODH/MDH Business Model",
+  image: odh,                         // or a string '/assets/..' if using public folder
+  description: "Run your own Flipkart-backed delivery hub franchise with assured business, transparent earnings, and high growth potential.",
+  link: "/odh-mdh-business-model"
+},
+
   ];
 
   return (

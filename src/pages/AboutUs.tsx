@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import   { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +7,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import IndiaMap from "@/components/IndiaMap";
 import warehouseInterior from "@/assets/warehouse-interior.jpg";
+import modern from "@/assets/services/modern2.jpg";
+import new1 from "@/assets/hero-logistics.jpg";
+import office1 from "@/assets/gallery/Office/office2.jpg";
+import office2 from "@/assets/gallery/Office/office3.jpg";
+import cel2 from "@/assets/gallery/Celebrations/img1.jpg";
+import cel3 from "@/assets/gallery/Celebrations/img3.jpg";
+import trip1 from "@/assets/gallery/Trips/trip1.jpg";
+import trip2 from "@/assets/gallery/Trips/trip2.jpg";
 const AboutUs = () => {
   const [selectedMilestone, setSelectedMilestone] = useState<number | null>(null);
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
@@ -35,37 +43,73 @@ const AboutUs = () => {
     title: "Innovation",
     description: "We continuously learn, evolve, and upgrade our systems for smarter solutions."
   }];
-  const milestones = [{
+  const milestones = [
+  {
     year: "2015",
     event: "Founded with a vision",
     description: "Started to simplify and empower Indian logistics",
-    details: ["Xpressbees starts delivering 90,000 shipments a day", "First in the nation to introduce next day delivery"]
-  }, {
+    details: [
+      "Xpressbees starts delivering 90,000 shipments a day",
+      "First in the nation to introduce next day delivery"
+    ]
+  },
+  {
     year: "2017",
     event: "100+ cities expansion",
     description: "Tech-enabled last-mile delivery across India",
-    details: ["Tech-enabled last-mile delivery across India", "Expanded to 100+ cities with advanced tracking"]
-  }, {
+    details: [
+      "Tech-enabled last-mile delivery across India",
+      "Expanded to 100+ cities with advanced tracking"
+    ]
+  },
+  {
     year: "2019",
     event: "500+ logistics centers",
     description: "Crossed nationwide coverage milestone",
-    details: ["Crossed nationwide coverage milestone", "Established 500+ strategic logistics centers"]
-  }, {
+    details: [
+      "Crossed nationwide coverage milestone",
+      "Established 500+ strategic logistics centers"
+    ]
+  },
+  {
     year: "2021",
     event: "10,000+ pin codes",
     description: "Reached comprehensive serviceable locations",
-    details: ["Reached comprehensive serviceable locations", "Coverage expanded to 10,000+ pin codes"]
-  }, {
+    details: [
+      "Reached comprehensive serviceable locations",
+      "Coverage expanded to 10,000+ pin codes"
+    ]
+  },
+  {
     year: "2022",
     event: "Automated distribution",
     description: "Major centers opened in key metros",
-    details: ["Major automated centers opened in key metros", "Introduced AI-powered sorting and distribution"]
-  }, {
+    details: [
+      "Major automated centers opened in key metros",
+      "Introduced AI-powered sorting and distribution"
+    ]
+  },
+  {
     year: "2023",
     event: "Top logistics tech",
     description: "Recognized among India's leading companies",
-    details: ["Recognized among India's leading logistics companies", "Advanced tech solutions and sustainable practices"]
-  }];
+    details: [
+      "Recognized among India's leading logistics companies",
+      "Advanced tech solutions and sustainable practices"
+    ]
+  },
+  {
+    year: "2025",
+    event: "Nationwide leadership",
+    description: "Achieved industry leadership in speed and reliability",
+    details: [
+      "Serving 15,000+ pin codes with consistent delivery excellence",
+      "Expanded workforce to 15,000+ staff and delivery partners",
+      "Implemented next-gen AI logistics for smarter deliveries"
+    ]
+  }
+];
+
   const networkData = [{
     region: "NORTH",
     centers: "700+",
@@ -169,7 +213,7 @@ const AboutUs = () => {
                 
                 
               </div>
-              
+{/*               
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p className="text-xl font-light">
                   Founded by <span className="font-semibold text-foreground">Anshuu Sahu</span> in Ghaziabad, UP, 
@@ -185,7 +229,43 @@ const AboutUs = () => {
                   Today, we proudly serve with <span className="font-semibold text-foreground">10,000+ staff</span> and 
                   delivery partners, delivering speed, reliability, and excellence across all regions.
                 </p>
-              </div>
+              </div> */}
+
+              {/* <div className="space-y-6 text-muted-foreground leading-relaxed">
+  <p className="text-xl font-light">
+    Founded with a vision of <span className="font-semibold text-foreground">reliable and fast logistics</span>, 
+    Minibharat Logistics has always prioritized <span className="text-orange-primary font-medium">Customer Satisfaction</span> at its core.
+  </p>
+  
+  <p className="text-lg">
+    Starting from a small hub, we have expanded to a nationwide network, delivering goods efficiently through 
+    strategic partnerships and a strong commitment to operational excellence.
+  </p>
+  
+  <p className="text-lg">
+    Today, Minibharat Logistics proudly operates with <span className="font-semibold text-foreground">10,000+ team members </span> 
+    and delivery partners, ensuring timely, safe, and dependable logistics services across India.
+  </p>
+</div> */}
+  
+  <div className="space-y-6 text-muted-foreground leading-relaxed">
+  <p className="text-xl font-light">
+    <span className="font-semibold text-foreground">Mini Bharat Courier & Logistics Service</span>, was established in 2023 with the Corporate Identification Number (CIN) <span className="font-medium text-orange-primary">U53200TZ2024PTC030847</span>. Our PAN number is <span className="font-medium text-orange-primary">AARCM8668E</span>, TAN is <span className="font-medium text-orange-primary">CHEM29196G</span>, and GST number is <span className="font-medium text-orange-primary">33AARCM8668E1ZY</span>. As a proprietorship courier brand, we operate over 60 franchise stores nationwide and are recognized as India’s fastest-growing online e-commerce delivery network with zonal offices spanning the country, based in Tamil Nadu with hubs in Mumbai, Hyderabad, and Haryana.
+  </p>
+
+  <p className="text-lg">
+    Mini Bharat Courier & Logistics Service is a reputable logistics partner dedicated to delivering reliable courier services across India. We have garnered trust and recognition for our exceptional service and commitment to our customers. Our integrated logistics solutions cater to businesses across India, providing comprehensive supply chain support. We are currently undergoing a digital transformation to enhance the speed, safety, and efficiency of our services, thereby opening up limitless opportunities for our clients.
+  </p>
+
+  <p className="text-lg">
+    At Mini Bharat Courier & Logistics Service, we specialize in offering end-to-end logistics solutions, including warehousing and e-commerce logistics. Recognizing the unique needs of e-commerce businesses, we provide tailored services that streamline order fulfillment, inventory management, and ensure timely deliveries. Our experienced team is dedicated to efficiently managing and delivering your courier needs on time, every time. We understand the critical importance of secure and efficient courier services in today's dynamic environment. Whether it's important documents, packages, or delicate items, we have the expertise and resources to meet your requirements.
+  </p>
+
+  <p className="text-lg">
+    With our extensive network and advanced tracking system, you can monitor your shipment in real-time, ensuring peace of mind throughout the delivery process. Customer satisfaction is our priority. We strive to build lasting relationships by offering personalized attention and responsive customer support. What sets us apart is our commitment to sustainability. We prioritize eco-friendly practices, such as using energy-efficient vehicles and optimizing delivery routes, to minimize our environmental impact. Whether you're a business seeking a reliable courier partner or an individual sending a package to loved ones, trust Mini Bharat Courier & Logistics Service to deliver your shipments safely and on time. We are dedicated to exceeding your expectations every step of the way.
+  </p>
+</div>
+
               
               <div className="flex flex-wrap gap-4 pt-4">
                 <div className="flex items-center gap-3 px-6 py-3 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover-scale">
@@ -202,7 +282,7 @@ const AboutUs = () => {
             <div className="relative animate-fade-in">
               <div className="absolute -inset-4 bg-gradient-to-r from-orange-primary/20 to-blue-500/20 rounded-3xl blur-2xl"></div>
               <div className="relative bg-white p-4 rounded-3xl shadow-2xl">
-                <img src={warehouseInterior} alt="Modern Warehouse Logistics Facility" className="w-full h-[500px] object-cover rounded-2xl" />
+                <img src={modern} alt="Modern Warehouse Logistics Facility" className="w-full h-[500px] object-cover rounded-2xl" />
                 <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -410,7 +490,7 @@ const AboutUs = () => {
             {/* Mobile Timeline Line */}
             <div className="md:hidden absolute left-6 top-8 bottom-8 w-1 bg-gradient-to-b from-orange-primary/20 via-orange-primary to-orange-primary/20 rounded-full"></div>
           </div>
-        </div>
+        </div>    
       </section>
 
       {/* Pan-India Network Map Section */}
@@ -498,7 +578,7 @@ const AboutUs = () => {
             </div>
             
             <div>
-              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=500&fit=crop" alt="Logistics Warehouse" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
+              <img src={new1} alt="Logistics Warehouse" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
             </div>
           </div>
         </div>
@@ -515,7 +595,7 @@ const AboutUs = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {["https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop"].map((image, index) => <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            {[office1, office2,cel2,cel3,trip1,trip2].map((image, index) => <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <img src={image} alt={`Company Culture ${index + 1}`} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>)}
